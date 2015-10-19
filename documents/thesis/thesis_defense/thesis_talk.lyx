@@ -1,0 +1,4969 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+%\usetheme{boxes}
+%\usetheme{Warsaw}
+%\usetheme{Curso}
+%\usetheme{Rochester}
+%\usetheme{Madrid}
+\usetheme{Pittsburgh}
+%\usetheme{Antibes}
+%\usetheme{Montpellier}
+%\usetheme{Berkeley}
+%\usetheme{PaloAlto}
+%\usetheme{Goettingen}
+%\usetheme{Marburg}
+%\usetheme{Hannover}
+%\usetheme{Berlin}
+%\usetheme{Ilmenau}
+%\usetheme{Dresden}
+%\usetheme{Darmstadt}
+%\usetheme{Frankfurt}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Copenhagen}
+%\usetheme{Malmoe}
+%\usetheme{Boadilla}
+
+%\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\usecolortheme{default}
+%\usecolortheme{sidebartab}
+%\usecolortheme{albatross}
+%\usecolortheme{beetle} 
+%\usecolortheme{crane}
+%\usecolortheme{dove} 
+%\usecolortheme{fly} 
+%\usecolortheme{seagull}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{wolverine}
+%\usecolortheme{dolphin}
+%\usecolortheme{rose}
+%\usecolortheme{beaver}
+%\usecolortheme{dove}
+
+%\usetheme{Oxygen}
+
+
+\defaultfontfeatures{Mapping=tex-text}
+\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}
+\setmonofont{Fira Mono}
+\newfontfamily\ExtraLight{Fira Sans ExtraLight}
+\newfontfamily\Light{Fira Sans Light}
+\newfontfamily\Book{Fira Sans}
+\newfontfamily\Medium{Fira Sans Medium}
+
+\setbeamerfont{title}{family=\Book, size=\Large}
+\setbeamerfont{author}{family=\ExtraLight, size=\small}
+\setbeamerfont{date}{family=\ExtraLight, size=\small}
+
+\setbeamerfont{section title}{family=\Book, size=\Large}
+
+\setbeamerfont{block title}{family=\Book, size=\normalsize}
+\setbeamerfont{block title alerted}{family=\Book,size=\normalsize}
+
+\setbeamerfont{subtitle}{family=\Light, size=\fontsize{12}{14}}
+\setbeamerfont{frametitle}{family=\Book, series=\scshape, size=\Large}
+
+\setbeamerfont{caption}{size=\small}
+\setbeamerfont{caption name}{family=\Book}
+
+\setbeamerfont{description item}{family=\Book}
+
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+An Adapted Laplacian Operator For Hybrid Quad/Triangle Meshes
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+cim@lab
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+
+\series medium
+\size footnotesize
+A thesis submitted in partial fulfillment of the requirements for the degree
+ of:
+\series bold
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Master in Systems Engineering and Computer Science
+\end_layout
+
+\begin_layout Author
+Alexander Pinzón Fernández
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+Advisor: Eduardo Romero
+\size default
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Alexander Pinzón, Eduardo Romero
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Bogotá-Colombia.
+ October 2015
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset space \hspace{}
+\length 10bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/logo_un_blaco_y_negro.png
+	lyxscale 10
+	width 30text%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/logo_cimalab.png
+	lyxscale 10
+	width 35text%
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 10bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Spectral Mesh Processing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Taubin in 1995 suggested that the
+\series bold
+ Discrete Laplace Operator
+\series default
+ allows to do 
+\shape italic
+Spectral Processing
+\shape default
+ on 
+\series bold
+Polygonal Meshes
+\series default
+ in an analogous way to signal processing with the Fourier transform.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Gargola_Smoothing_And_Enhance.png
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Original Mesh, Low-pass and enhancement filters [Vallet08].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+The eigenvalues of Laplace operator are called the 
+\shape italic
+natural frequencies
+\shape default
+ and the eigenvectors are called the 
+\shape italic
+natural vibrations
+\shape default
+ [Taubin 1995].
+\end_layout
+
+\begin_layout NoteItem
+WhySpectral? Adifferentwaytolookatfunctionsonadomain
+\end_layout
+
+\begin_layout NoteItem
+Taubin in 1995 proposed that is possible to process polygonal meshes in
+ an analogous way to how signals are processed with the Fourier transform.
+\begin_inset Newline newline
+\end_inset
+
+En 1995 Taubin propuso que era posible procesar mallas de polígonos de una
+ manera análoga a como se procesas señales con la transformada de Fourier.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Taubin observo que los componentes en frecuencia de la transformada de Fourier
+ podían ser descritos como la decomposition of the signal into a linear
+ combination of the eigenvetors of the Laplacian operador.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Taubin definio un nuevo operador discreto que tomaría el lugar del operador
+ Laplaciano para suavizar poligonal meshes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Pinkall , Desbrun y otros autores definieron nuevas versiones discretas
+ del operador Laplaciano pero tomaron en cuenta la definición del Bernoulli
+ del operador Laplaciano la cual lo toma como la divergencia del gradiente
+ de una superficie.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Hoy dia se cuenta con representaciones discretas del operador de Laplace
+ Beltrami para procesar mallas de polígonos compuestas por triángulos o
+ por cuadrángulos Nosotros proponemos una adaptación para poder trabajar
+ mallas de polígonos hibridas compuestas por triángulos y cuadrángulos que
+ permitan realizar una aproximación espectral al procesamiento de mallas
+ de polígonos.
+ 
+\end_layout
+
+\begin_layout NoteItem
+Taubin (1995) suggested that the frequency components of the Fourier transform
+ could be described as decomposition of the signal into a linear combination
+ of the eigenvectors of the Laplacian operator.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Fourier transform 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The basis functions of the Fourier transform
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\mathbf{e}_{w}=\mathbf{e}^{2\pi iwx}=\cos\left(2\pi wx\right)-i\sin\left(2\pi wx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Fourier transform of 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $F\left(w\right)\sideset{=}{_{-\infty}^{\infty}}\int f\left(x\right)\mathbf{e}_{w}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+The Inverse Fourier transform of 
+\begin_inset Formula $F\left(w\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $f\left(x\right)\sideset{=}{_{-\infty}^{\infty}}\int F\left(w\right)\mathbf{e}_{w}dw=\underset{w=-\infty}{\overset{\infty}{\sum}}\left\langle f,\mathbf{e}_{w}\right\rangle \mathbf{e}_{w}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplacian of the Fourier transform
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+if 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is a eigenfunction and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a corresponding eigenvalue of a linear differential operator
+\series bold
+ 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+
+\series default
+ then
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\mathbf{Au}=\lambda\mathbf{u},\,\,\,\mathbf{u}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basis 
+\begin_inset Formula $\mathbf{e}_{w}$
+\end_inset
+
+ sine and cosine functions of the Fourier transform are eigenfunctions of
+ the Laplacian with eigenvalue 
+\begin_inset Formula $\lambda_{w}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\Delta\left(\mathbf{e}_{w}\right)=\frac{\partial^{2}}{\partial x^{2}}\mathbf{e}_{w}=-\left(2\pi w\right)^{2}\mathbf{e}_{w}=\lambda_{w}\mathbf{e}_{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\Delta\left(\mathbf{e}_{w}\right)=\lambda_{w}\mathbf{e}_{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Inner product 
+\begin_inset Formula $\left\langle f,\mathbf{e}_{w}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+A widely used class of linear operators acting on infinite dimensional spaces
+ are the differential operators on function spaces.
+ Let D be a linear differential operator on the space 
+\backslash
+mathbf{C^
+\backslash
+infty} of infinitely differentiable real functions of a real argument t.
+ The eigenvalue equation for D is the differential equation https://en.wikipedia.o
+rg/wiki/Eigenvalues_and_eigenvectors#Generalizations_to_infinite-dimensional_spa
+ces
+\end_layout
+
+\begin_layout NoteItem
+Taubin analogy between Fourier transform and eigenvectors of Laplacian operator
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace-Beltrami operator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+The Laplace-Beltrami operator 
+\begin_inset Formula $\Delta_{M}$
+\end_inset
+
+ is a differential operator given by the divergence of a gradient field
+ on a 
+\series bold
+surface
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Formula 
+\[
+\begin{array}[t]{c}
+\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}+\frac{\partial^{2}f}{\partial z^{2}}=0\\
+\nabla_{M}^{2}f=\Delta_{M}=0\\
+\Delta_{M}=div\left(\nabla_{M}f\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+where 
+\begin_inset Formula $M$
+\end_inset
+
+ is compact and smooth 
+\series bold
+Surface
+\series default
+ (2D-Manifold)
+\end_layout
+
+\begin_layout Standard
+Laplace-Beltrami is a generalization of Laplace operator for functions on
+ surfaces.
+\end_layout
+
+\begin_layout NoteItem
+The LBO is a generalization of the Laplace operator to surfaces.
+\begin_inset Newline newline
+\end_inset
+
+and 
+\begin_inset Formula $f$
+\end_inset
+
+ is twice differentiable function
+\begin_inset Newline newline
+\end_inset
+
+This operator allows modeling the behavior of complex applications such
+ as noise reduction, enhancement, remeshing, UV mapping, posing, skeletonization
+, among others, in a simple way.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Surface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Manifolds.pdf
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 2bp
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 40bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+A Surface 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 2D topological manifold
+\end_layout
+
+\begin_layout Plain Layout
+For which every point 
+\begin_inset Formula $x\in M\subseteq\mathbb{R}^{3}$
+\end_inset
+
+ has a neighbourhood 
+\begin_inset Formula $N_{x}$
+\end_inset
+
+ homeomorphic to euclidean space 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+A homeomorphism 
+\begin_inset Formula $\phi:\,\,\, N_{x}\rightarrow\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Surface discretization with polygonal meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+In computer graphics a 
+\series bold
+Surface
+\series default
+ is often discretized into a 
+\series bold
+Polygonal Mesh
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Polygonal Mesh
+\series default
+ is a set of points that are connected by 
+\series bold
+triangles
+\series default
+ and 
+\series bold
+quads
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Polygon_mesh.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout AlertBlock
+We need discrete versions of Laplacian operator to work with polygonal meshes.
+\end_layout
+
+\begin_layout NoteItem
+Since meshes are inherently not smooth we cannot employ classical calculus
+ methods on these surfaces.
+\end_layout
+
+\begin_layout NoteItem
+It is therefore necessary to define a 
+\series bold
+discrete Laplacian operator 
+\series default
+that acts on functions defined by such meshes.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Discrete Laplacian operator as a matrix equation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The discrete version of Laplace operator for polygonal meshes.
+\end_layout
+
+\begin_layout Standard
+Given a polygonal mesh
+\series bold
+ 
+\begin_inset Formula $\mathbf{M}=\left[v_{1},...\,,v_{n}\right]^{T}$
+\end_inset
+
+
+\series default
+ and 
+\begin_inset Formula $v_{i}\in\mathbb{R}^{3}$
+\end_inset
+
+ we define the 
+\series bold
+Discrete Laplacian operator matrix
+\series default
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ with size 
+\begin_inset Formula $n\times n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $L\left(i,j\right)=\begin{cases}
+w_{ij} & \mbox{if }j\in N\left(v_{i}\right)\\
+\sum w_{ik} & \mbox{if }i=j\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+ are the weights between the vertex 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and vertex 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+.
+ The weights are define depending of the polygonal structure and application.
+\end_layout
+
+\begin_layout Standard
+
+\size tiny
+\color white
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N\left(v_{i}\right)$
+\end_inset
+
+ is the 1-ring neighborhood with shared face to vertex 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+Debido a estas propiedades a matrix L puede tener sus eigenvetores y cumplir
+ esta propiedad.
+\end_layout
+
+\begin_layout NoteItem
+similar to an eigenvector of a matrix 
+\begin_inset Formula $\mathbf{A}\mathbf{e_{i}}=\lambda_{i}\mathbf{e}_{i}$
+\end_inset
+
+ [Botsch 2010].
+\end_layout
+
+\begin_layout NoteItem
+Taubin's analogy between the Fourier transform and Laplace Operator.
+\end_layout
+
+\begin_layout NoteItem
+Properties of Matrix 
+\begin_inset Formula $L$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout NoteItem
+• Symmetry
+\end_layout
+
+\begin_layout NoteItem
+• Positive Weights.
+\end_layout
+
+\begin_layout NoteItem
+• Positive Semi-Definiteness
+\end_layout
+
+\begin_layout NoteItem
+In polygonal meshes, spectral structure is calculated using the eigenvectors
+ of the discrete versions of the Laplace-Beltrami operator.
+\end_layout
+
+\begin_layout NoteItem
+The weights are define depending of the polygonal structure.
+\end_layout
+
+\begin_layout NoteItem
+Weights (Herholz2012)Page 21
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Desired properties for Laplacian matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This properties ensure the construction of eigenstructure of Laplacian matrix
+ and then those eigenvectors of L matrix are a orthogonal basis of 
+\begin_inset Formula $\mathbb{R}{}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Symmetry.
+\end_layout
+
+\begin_layout Itemize
+Square.
+\end_layout
+
+\begin_layout Itemize
+Locality.
+\end_layout
+
+\begin_layout Itemize
+Positive Weights.
+\end_layout
+
+\begin_layout Itemize
+Positive Semi-Definiteness.
+\end_layout
+
+\begin_layout Itemize
+Convergence.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Eigenstructure of Laplacian matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Formula $L\mathbf{e_{i}}=\lambda_{i}\mathbf{e_{i}},\,\,\,\mathbf{e_{i}}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The eigenvector 
+\begin_inset Formula $\mathbf{e}_{i}$
+\end_inset
+
+ of 
+\begin_inset Formula $L$
+\end_inset
+
+ is a 
+\series bold
+\shape slanted
+natural vibration
+\series default
+\shape default
+ of the mesh [Taubin95].
+\end_layout
+
+\begin_layout Itemize
+The frequency of the wave 
+\begin_inset Formula $\mathbf{e}_{i}$
+\end_inset
+
+ is the eigenvalue 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ of 
+\begin_inset Formula $L$
+\end_inset
+
+ that is the 
+\series bold
+\shape slanted
+natural frequency 
+\series default
+\shape default
+[Taubin95].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Harmoni_Eigenvectors_dog.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Color values are the amplitude of a wave 
+\begin_inset Formula $\mathbf{e}_{i}$
+\end_inset
+
+ projected on the mesh [Vallet08].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Since the matrix L is symmetric and positive semi-definite (see Section
+ A.1), its eigenvectors build an orthogonal basis of IRn, such that we can
+ exactly represent each vector f = (f1, .
+ .
+ .
+ , fn)T in this basis: [botsh 2010]
+\end_layout
+
+\begin_layout NoteItem
+la multiplicacion del vector f por un vector base e, lo lleva al espacio
+ representado por L
+\end_layout
+
+\begin_layout NoteItem
+The 
+\shape slanted
+k
+\shape default
+th entry of 
+\begin_inset Formula $\mathbf{e}_{i}$
+\end_inset
+
+ corresponds to the amplitude of the wave 
+\begin_inset Formula $\mathbf{e}_{i}$
+\end_inset
+
+ at vertex 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+Si A: V → V es un operador lineal en un cierto 
+\backslash
+scriptstyle 
+\backslash
+mathbb{K}espacio vectorial V, v≠0 es un vector diferente de cero en V y
+ c es un escalar tales que
+\end_layout
+
+\begin_layout NoteItem
+• The eigenvectors of L are a basis of 
+\backslash
+mathbb{R}^{n} .
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mesh reconstruction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The mesh 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ can be reconstructed from your spectral decomposition in the analogous
+ way that Fourier transform.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\mathbf{M}=\underset{i=1}{\overset{n}{\sum}}\left\langle \mathbf{e}_{i},\mathbf{M}\right\rangle \mathbf{e_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/Reconstructions_With_Eigenvectors.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mesh reconstruction with first 
+\begin_inset Formula $n$
+\end_inset
+
+ eigenvectors of the Discrete Laplacian Operator [Levy10].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Weights for Laplacian operator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Desired property:
+\end_layout
+
+\begin_layout Frame
+Non-negative weights 
+\begin_inset Formula $ω_{ij}$
+\end_inset
+
+ for 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ ensure a positive semi-definite matrix.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Umbrella Operator 
+\begin_inset Formula $w_{ij}=\begin{cases}
+1 & \,\,\,\mbox{if }j\in N\left(v_{i}\right)\\
+0 & \,\,\,\mbox{else}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Fujiwara's Operator 
+\begin_inset Formula $w_{ij}=\begin{cases}
+\frac{1}{\left\Vert v_{j}-v_{i}\right\Vert } & \,\,\,\mbox{if }j\in N\left(v_{i}\right)\\
+0 & \,\,\,\mbox{else}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+Fujiwara - [Desbrun99]
+\end_layout
+
+\begin_layout NoteItem
+Mean Value Coordinates - Floater03
+\end_layout
+
+\begin_layout NoteItem
+https://es.wikipedia.org/wiki/Matriz_definida_positiva
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1999 Desbrun's operator for triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+This operator only work with meshes composed only by 
+\series bold
+triangles
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Desbrun's operator is the discretized version of the Laplace-Beltrami operator.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/voronoi_region.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{ij}=\frac{1}{4A_{i}}\left(\cot\alpha_{j}+\cot\beta_{j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ is area of the 1-ring neighborhood.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are the opposite angles to edge between vertex 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and vertex 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2011 Xion's MLBO operator for quad meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+This operator only work with meshes composed only by 
+\series bold
+quads
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Xion's operator is the mean of Desbrun's operator for all possible triangulation
+s for quad meshes.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/quad_xiong.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{ij}=\frac{1}{4A_{i}}\left(\cot\theta_{\left(j-1\right)1}+\cot\theta_{\left(j-1\right)4}+\cot\theta_{j3}+\cot\theta_{j6}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{ij'}=\frac{1}{2A_{i}}\left(\cot\theta_{j2}+\cot\theta_{j5}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{i}=\frac{1}{2}\underset{j\in i^{*}}{\sum}\left(A\left(t_{j2}\right)+A\left(t_{j2}\right)+A\left(t_{j3}\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+ are the weights of neighbors that share an edge with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{ij'}$
+\end_inset
+
+ are the weights of neighbors that share face with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+where 
+\series bold
+
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ 
+\series default
+is the average area of the 1-ring neighborhood.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplacian applications on 3D modeling process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+General 3D modeling process on polygonal meshes.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/ModelingProcess.pdf
+	lyxscale 50
+	width 95text%
+	BoundingBox 0bp 0bp 720bp 500bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Edge loops for faces
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Hybrid quad/triangle meshes are necessary by artists to 3D modeling
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quad_faces2.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Triangle Mesh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quad_faces.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hybrid Quad/Triangle Mesh
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Proposed Method
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Our proposal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "58col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+We propose an extension of the discrete Laplace-Beltrami operator to work
+ with hybrid quad/triangle meshes and eliminates the need of triangulate
+ the mesh and also allows the preservation of the original topology.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "38col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Our_Proposal_ModelingProcess.pdf
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gradient of voronoi area
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The area change produced by the movement of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is called the gradient of 
+\shape italic
+Voronoi region 
+\shape default
+[Pinkall93, Desbrun99]
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\nabla A=\frac{1}{2}\underset{j}{\sum}\left(\cot\alpha_{j}+\cot\beta_{j}\right)\left(v_{i}-v_{j}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/voronoi_region.pdf
+	width 70col%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Area of the Voronoi region around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ in dark blue.
+ 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ belong to the first neighborhood around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\alpha_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+ opposite angles to edge 
+\begin_inset Formula $\overrightarrow{v_{j}-v_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mean curvature of surfaces
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+In 2D, curvature 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ at a given point 
+\begin_inset Formula $p$
+\end_inset
+
+ on a circle with radius R is defined as [Meyer01] 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\kappa=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 3D-surface
+\shape slanted
+, sectional curvature
+\shape default
+ at a given point 
+\begin_inset Formula $p$
+\end_inset
+
+ is the intersection of a surface with a plane parallel to a normal 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ of 
+\begin_inset Formula $p$
+\end_inset
+
+ [Meyer01].
+\end_layout
+
+\begin_layout Standard
+The
+\shape slanted
+ Mean Curvature
+\shape default
+ 
+\begin_inset Formula $\kappa_{H}$
+\end_inset
+
+ at a given point 
+\begin_inset Formula $p$
+\end_inset
+
+ is defined as
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\kappa_{H}=\frac{\kappa_{1}+\kappa_{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\kappa_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\kappa_{2}$
+\end_inset
+
+ are the maximal and minimal sectional curvatures known as 
+\shape slanted
+principal curvatures
+\shape default
+ [Meyer01].
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Discrete mean curvature normal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Gradient of voronoi region
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Formula $\nabla A=\frac{1}{2}\underset{j}{\sum}\left(\cot\alpha_{j}+\cot\beta_{j}\right)\left(v_{i}-v_{j}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the gradient of Voronoi region is normalized by the total area of the
+ 1-ring neighborhood around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, we obtained a 
+\shape slanted
+discrete mean curvature normal
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $2\kappa_{H}\mathbf{n=\frac{\nabla A}{A}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\shape slanted
+Laplace Beltrami operator
+\shape default
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ is used for measuring the mean curvature normal of the surface 
+\begin_inset Formula $S$
+\end_inset
+
+ [Pinkall93].
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\Delta S=2\kappa_{H}\mathbf{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mean average area
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Xiong's define the mean average area of voronoi region of quad around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ as the average of areas of primal and dual triangulations.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $Area(Q)=\frac{Area_{1}+Area_{2}}{2}=\frac{A(t_{j1}^{*})+A(t_{j2}^{*})+A(t_{j3}^{*})}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/quad_xiong_triangulation.pdf
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Original quad.
+ (b) Primal triangulation around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $t_{j1}^{*}\equiv\vartriangle v_{i}v_{j}v_{j}^{\prime},\, t_{j2}^{*}\equiv\vartriangle v_{i}v_{j}^{\prime}v_{j+1}$
+\end_inset
+
+ (b) Dual triangulation around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $t_{j3}^{*}\equiv\vartriangle v_{i}v_{j}v_{j+1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+El area de la region de voronoi en la triangulacian primal es t1 + t2, y
+ el area de la region de voronoi alrededor de vi en la triangulacion dual
+ es solo t3, por esa razon el promedio es la suma sobre 2
+\end_layout
+
+\begin_layout NoteItem
+Area of primal triangulation of voronoi region around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $Area_{1}(v_{i})=Area(t_{j1}^{*})+Area(t_{j2}^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout NoteItem
+Area of dual triangulation of voronoi region around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $Area_{2}(v_{i})=Area(t_{j3}^{*})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace Beltrami operator for hybrid quad/triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our proposal
+\end_layout
+
+\begin_layout Standard
+Given a hybrid mesh 
+\begin_inset Formula $M=\left\{ V,Q,T\right\} $
+\end_inset
+
+, with vertices 
+\begin_inset Formula $V$
+\end_inset
+
+, quads 
+\begin_inset Formula $Q$
+\end_inset
+
+ and triangles 
+\begin_inset Formula $T$
+\end_inset
+
+, define the mean average area of all triangulations around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A\left(v_{i}\right)=\underset{j=1}{\overset{m}{\sum}}A(q_{j})+\underset{k=1}{\overset{r}{\sum}}A(t_{k})\label{eq:Area_around_vi}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $q_{j}\in Q_{v_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $t_{k}\in T_{v_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying Xiong's mean average area to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Area_around_vi"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A\left(v_{i}\right)=\frac{1}{2}\underset{j=1}{\overset{m}{\sum}}\left[A\left(t_{j1}^{*}\right)+A\left(t_{j2}^{*}\right)+A\left(t_{j3}^{*}\right)\right]+\underset{k=1}{\overset{r}{\sum}}A(t_{k})\label{eq:area_around_vi_according_xiong}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace Beltrami operator for hybrid quad/triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our proposal
+\end_layout
+
+\begin_layout Standard
+Applying the gradient operator to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:area_around_vi_according_xiong"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla A\left(v_{i}\right)=\frac{1}{2}\underset{j=1}{\overset{m}{\sum}}\left[\nabla A\left(t_{j1}^{*}\right)+\nabla A\left(t_{j2}^{*}\right)+\nabla A\left(t_{j3}^{*}\right)\right]+\underset{k=1}{\overset{r}{\sum}}\nabla A(t_{k})\label{eq:eq_area_expand}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using Desbrun's equation to compute the gradient to (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq_area_expand"
+
+\end_inset
+
+), we have
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\nabla A\left(t_{j1}^{*}\right)=\frac{\cot\theta_{j3}\left(v_{j}-v_{i}\right)+\cot\theta_{j2}\left(v_{j}^{\prime}-v_{i}\right)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\nabla A\left(t_{j2}^{*}\right)=\frac{\cot\theta_{j5}\left(v_{j}^{\prime}-v_{i}\right)+\cot\theta_{j4}\left(v_{j+1}-v_{i}\right)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\nabla A\left(t_{j3}^{*}\right)=\frac{\cot\theta_{j6}\left(v_{j}-v_{i}\right)+\cot\theta_{j1}\left(v_{j+1}-v_{i}\right)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $\nabla A\left(t_{k}\right)=\frac{\cot\alpha_{k}\left(v_{k}-v_{i}\right)+\cot\beta_{k}\left(v_{k}-v_{i}\right)}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace Beltrami operator for hybrid quad/triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our proposal
+\end_layout
+
+\begin_layout Standard
+Therefore (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq_area_expand"
+
+\end_inset
+
+) can be rewritten as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla A\left(v_{i}\right)=\underset{j=1}{\overset{n}{\sum}}w_{ij}\left(v_{j}-v_{i}\right)\label{eq:sum_with_w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ are the neighbors of 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the relationship between Laplace-Beltrami operator 
+\begin_inset Formula $\triangle$
+\end_inset
+
+ and Mean curvature normal in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sum_with_w"
+
+\end_inset
+
+) we define the 
+\series bold
+Triangle Quad Laplace Beltrami Operator TQLBO
+\series default
+ as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\triangle\left(v_{i}\right)=2\kappa_{H}\mathbf{n_{i}}=\frac{\nabla A\left(v_{i}\right)}{Area_{i}}=\frac{1}{2Area_{i}}\underset{j=1}{\overset{n}{\sum}}w_{ij}\left(v_{j}-v_{i}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $Area_{i}$
+\end_inset
+
+ is the area of the 1-ring neighborhood around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Weights for TQLBO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our proposal
+\end_layout
+
+\begin_layout Standard
+We define the weights of the TQLBO based on five simple cases
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -10bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/beltrami.pdf
+	width 90page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 5 basic triangle-quad cases with a vertex 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ and the relationship with 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{j}^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{ij}=\begin{cases}
+\left(\cot\alpha_{j}+\cot\beta_{j}\right) & \mbox{case }\mathit{a.}\\
+\frac{1}{2}\left(\cot\theta_{\left(j-1\right)1}+\cot\theta_{\left(j-1\right)4}+\cot\theta_{j3}+\cot\theta_{j6}\right) & \mbox{case \ensuremath{\mathit{b}}.}\\
+\left(\cot\theta_{j2}+\cot\theta_{j5}\right) & \mbox{case \ensuremath{\mathit{c}}.}\\
+\frac{1}{2}\left(\cot\theta_{j3}+\cot\theta_{j6}\right)+\cot\beta_{j} & \mbox{case \ensuremath{\mathit{d}}.}\\
+\frac{1}{2}\left(\cot\theta_{\left(j-1\right)1}+\cot\theta_{\left(j-1\right)4}\right)+\cot\alpha_{j} & \mbox{case \ensuremath{\mathit{e}}.}
+\end{cases}\label{eq:TQLBO_wij-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace operator as a matrix equation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our proposal
+\end_layout
+
+\begin_layout Standard
+We define a TQLBO as a matrix equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L\left(i,j\right)=\begin{cases}
+-\frac{1}{2A_{i}}w_{ij} & \mbox{if }j\in N\left(v_{i}\right)\\
+\frac{1}{2A_{i}}\underset{k\in N\left(v_{i}\right)}{\sum}w_{ik} & \mbox{if }i=j\\
+0 & \mbox{otherwise}
+\end{cases}\label{eq:TQLBO_Laplacian_Matrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $L$
+\end_inset
+
+ is a 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, 
+\begin_inset Formula $n$
+\end_inset
+
+ is the number of vertices , 
+\begin_inset Formula $N\left(v_{i}\right)$
+\end_inset
+
+ is the 1-ring neighborhood with shared face to 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ is the ring area around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Evaluation and Results
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Enhancing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A standard diffusion process is used.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\ensuremath{\frac{\partial V}{\partial t}=\lambda L\left(V\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To solve this equation, implicit integration is used as well as a normalized
+ version of TQLBO matrix
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\left(I-\left|\lambda dt\right|W_{p}L\right)V^{\prime}=V^{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\ensuremath{V^{t+1}=V^{t}+\mbox{sign}\left(\lambda\right)\left(V^{\prime}-V^{t}\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $L$
+\end_inset
+
+ is the TQLBO, 
+\begin_inset Formula $V^{\prime}$
+\end_inset
+
+ are the smoothing vertices, 
+\begin_inset Formula $V^{t}$
+\end_inset
+
+ are the actual vertices positions, 
+\begin_inset Formula $W_{p}$
+\end_inset
+
+ is a diagonal matrix with vertex weights, and 
+\begin_inset Formula $\lambda dt$
+\end_inset
+
+ is the inflate factor.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sculpting with enhancing filter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Inflate Brush
+\end_layout
+
+\begin_layout Standard
+Real-time brushes require the Laplacian matrix is constructed with the vertices
+ that are within the sphere radius defined by the user, reducing the matrix
+ to be processed.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $L\left(i,j\right)=\begin{cases}
+-\frac{w_{ij}}{\underset{j\in N\left(v_{i}\right)}{\sum}w_{ij}} & \mbox{if }\left\Vert v_{i}-u\right\Vert <r\wedge\left\Vert v_{j}-u\right\Vert <r\\
+0 & \mbox{if }\left\Vert v_{i}-u\right\Vert <r\wedge\left\Vert v_{j}-u\right\Vert \geq r\\
+\delta_{ij} & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $v_{j}\in N\left(v_{i}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $u$
+\end_inset
+
+ is the sphere center of radius 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ The matrices should remove rows and columns of vertices that are not within
+ the radius.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Compute the minimal surface with TQLBO results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/test_triangles_quads.pdf
+	lyxscale 20
+	height 60pheight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Original Model.
+ (b) Simple subdivision.
+ (c), (d) (e) Laplacian smoothing with 
+\begin_inset Formula $\lambda=7$
+\end_inset
+
+ and 2 iterations: (c) for quads, (d) for triangles, (e) for triangles and
+ quads random chosen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Shape Inflation with enhancing filter results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/camello_enhanced2.pdf
+	lyxscale 20
+	height 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top row: Original camel model in left.
+ Shape inflation with 
+\begin_inset Formula $\lambda=-30.0$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda=-100.0$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda=-400.0$
+\end_inset
+
+.
+ Bottom row: Shape inflation with weight vertex group, 
+\begin_inset Formula $\lambda=-50.0$
+\end_inset
+
+ and 2 iterations for the legs, 
+\begin_inset Formula $\lambda=-200.0$
+\end_inset
+
+ and 1 iteration for the head and neck.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Inflate brush results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/sculpt_brush.pdf
+	lyxscale 10
+	height 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top row: (a) Leg Camel, (b) Traditional inflate brush for leg into blue
+ circle, (c) Shape inflation brush for leg into red circle.
+ Bottom row: (a) Hand, (b) Traditional inflate brush for fingers into blue
+ circle, (c) Shape inflation brush for fingers in red circle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Inflate brush performance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace -10bp
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -20bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/verts_per_second_sculpt.pdf
+	lyxscale 60
+	height 70theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Performance of our dynamic shape inflation brush in terms of the sculpted
+ vertices per second.
+ Three models with 12K, 40K, 164K vertices used for sculpting in real time.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Products
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+1st product - Conference paper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\size small
+Brazilian Symposium on Computer Graphics and Image Processing SIBGRAPI 2013
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/PaperTQLBO3.png
+	lyxscale 25
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+2nd product - Awarded internship
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh smoothing based on curvature flow operator in a diffusion equation
+\end_layout
+
+\begin_layout Description
+Sponsor: Google Inc - Google Summer of Code 2012 program
+\end_layout
+
+\begin_layout Description
+Project: Mesh smoothing based on curvature flow operator in a diffusion
+ equation
+\end_layout
+
+\begin_layout Description
+Synopsis: This project proposes a new and robust mesh smoothing tool that
+ remove the noise of the surfaces of models captured with 3d scanners, zcameras
+ among others.
+\end_layout
+
+\begin_layout Description
+Blender software is an open source 3D application for modeling, rendering,
+ composing, video editing and game creation.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplacian smooth tool for Blender
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh smoothing based on curvature flow operator in a diffusion equation
+\end_layout
+
+\begin_layout Standard
+We define a Laplacian matrix for mesh smoothing with support for hybrid
+ quad/triangle meshes with holes as
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $L(i,j)=\begin{cases}
+-\frac{1}{2A_{i}}w_{ij} & \mbox{if }j\in N(v_{i})\wedge v_{i}\notin\mbox{Boundary}\\
+\frac{1}{2A_{i}}\underset{j\in N\left(v_{i}\right)}{\sum}w_{ij} & \mbox{if }i=j\wedge v_{i}\notin\mbox{Boundary}\\
+-\frac{1}{\left\Vert v_{i}-v_{j}\right\Vert } & \mbox{if }j\in N(v_{i})\wedge\left\{ v_{i},v_{j}\right\} \in\mbox{Boundary}\\
+\frac{2}{E_{i}}\underset{j\in N\left(v_{i}\right)}{\sum}\frac{1}{\left\Vert v_{i}-v_{j}\right\Vert } & \mbox{if }i=j\wedge\left\{ v_{i},v_{j}\right\} \in\mbox{Boundary}\\
+0 & \mbox{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+ is the TQLBO defined in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TQLBO_wij-1"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{i}=\underset{j\in N\left(v_{i}\right)}{\sum}e_{ij}$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+User interface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh smoothing based on curvature flow operator in a diffusion equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/Apinzonf_Diagram_Modifier_Panel.png
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Panel inside blender user interface of the Laplacian Smooth modifier tool.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh smoothing based on curvature flow operator in a diffusion equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/LaplacianSmoothingVertecGroup.pdf
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use of weights per vertex to constrain the effect of mesh smoothing.
+ (a) Original Model.
+ (b) Smoothing with 
+\begin_inset Formula $\lambda=1.5$
+\end_inset
+
+ (c) red vertices 
+\begin_inset Formula $weight=1.0$
+\end_inset
+
+, blue vertices 
+\begin_inset Formula $weight=0.0$
+\end_inset
+
+.
+ (d) Smoothing with 
+\begin_inset Formula $\lambda=2.5$
+\end_inset
+
+.
+ The red vertices were the only vertices smoothed.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh smoothing based on curvature flow operator in a diffusion equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/LaplacianSmoothingBoundary.pdf
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Smoothing boundary changing 
+\begin_inset Formula $\lambda_{Border}$
+\end_inset
+
+ factor.
+ (a) Original Model.
+ (b) Smoothing 
+\begin_inset Formula $\lambda_{Border}=1.0$
+\end_inset
+
+.
+ (c) Smoothing 
+\begin_inset Formula $\lambda_{Border}=2.5$
+\end_inset
+
+ (d) Smoothing with 
+\begin_inset Formula $\lambda_{Border}=10.0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+3rd product - Awarded internship
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Description
+Sponsor: Google Inc - Google Summer of Code 2013 program
+\end_layout
+
+\begin_layout Description
+Project: Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Description
+Synopsis: This project proposes a new tool that allows to pose a mesh while
+ preserving geometric details of the surface.
+\end_layout
+
+\begin_layout Description
+Blender software is an open source 3D application for modeling, rendering,
+ composing, video editing and game creation.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Differential coordinates
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\delta_{i}=\overset{m}{\underset{j=1}{\sum}}w_{ij}\left(v_{i}-v_{j}\right)\label{eq:DifferentialCoordinate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/DifferentialCoordinates.pdf
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Difference between 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and the center of mass of its neighbors 
+\begin_inset Formula $v_{1},...,v_{m}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{ij}$
+\end_inset
+
+ is the TQLBO defined in equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TQLBO_wij-1"
+
+\end_inset
+
+)
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplacian deform
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+The linear system for finding the new pose of a mesh is.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}L\\
+W_{c}
+\end{bmatrix}V=\begin{bmatrix}\delta\\
+W_{c}C
+\end{bmatrix}\label{eq:LaplacianDefomSystem}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $L$
+\end_inset
+
+ is a matrix that used our TQLBO defined in equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TQLBO_Laplacian_Matrix"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $Wc$
+\end_inset
+
+ is a matrix that has only ones in the indices of anchor vertices.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $V$
+\end_inset
+
+ is the vertices of mesh.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $C$
+\end_inset
+
+ is a vector with coordinates of anchor vertices after several manual transforma
+tions.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\delta$
+\end_inset
+
+ are the differential coordinates defined in equation 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:DifferentialCoordinate"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+User interface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/Apinzonf_Diagram_Deform_Modifier_Panel_01.png
+	width 70col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Panel inside Blender user interface of the Laplacian Deform modifier tool.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/Armadillo.pdf
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Anchor vertices in blue.
+ (a) Original Model, (b,c,d) new poses only change the anchor-vertices,
+ the system finds positions for vertices in yellow.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/cactus.pdf
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Original cactus model.
+ (b) Blue segments are rotated 70º to the right and afterwards a basic interpola
+tion is applied to the parts in yellow (c) Blue segments are rotated 70º
+ to the right and afterwards a Laplacian deform tool is applied to the parts
+ in yellow.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Mesh Editing with Laplacian Deform
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/horse.pdf
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Original Horse model.
+ (b) The blue segments are translated and rotated and then basic interpolation
+ is applied to the yellow parts (c) The blue segments are translated and
+ rotated and then the Laplacian Deform tool is applied to the yellow parts.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+4th product - Poster
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\size small
+6th International Seminar on Medical Image Processing and Analysis SIPAIM
+ 2010
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/PosteraA0-150dpi.pdf
+	lyxscale 10
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+5th product - Poster
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+
+\size small
+7th International Seminar on Medical Image Processing and Analysis SIPAIM
+ 2011
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/PosterSIPAIM2011.pdf
+	lyxscale 10
+	height 80theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Skeleton extraction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+Au et al.
+ [Au2008] propose the next system of equations to iteratively contract the
+ mesh until the volume is zero, next a simplification process is done and
+ a skeleton appears.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+W_{L}L\\
+W_{H}
+\end{array}\right]X_{t+1}=\left[\begin{array}{c}
+0\\
+W_{H}X_{t}
+\end{array}\right]\label{eq:SkeletonExtraction}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $L$
+\end_inset
+
+ is a matrix that used our TQLBO defined in equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:TQLBO_Laplacian_Matrix"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $W_{L}$
+\end_inset
+
+ is a diagonal weighting matrix for the smoothing factor.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $W_{H}$
+\end_inset
+
+ is a diagonal weighting matrix for the attraction constraint factor.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $A_{i}^{t}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $A_{i}^{0}$
+\end_inset
+
+ are the current area and initial area of the ring surrounding 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large{}Undesirable displacement of nodes from rotational center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/skeleton_problem.png
+	lyxscale 40
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Skeleton that have a node outside of rotational center.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Contribution
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+The basic idea is to move the vertices along a normal line, estimated at
+ every vertex, based on the average of the normals of the faces.
+ 
+\end_layout
+
+\begin_layout Standard
+This constraint eliminates the need to adjust the final skeleton.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/LineConstraintSkeleton.pdf
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Left: The vertex 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ moves along the line constraint.
+ Right: the distance of vertex 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ to plane 1 and plane 2 when the position in every iteration changes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The distance equation of point 
+\begin_inset Formula $p$
+\end_inset
+
+ to plane 
+\begin_inset Formula $\Pi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+The plane equation
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $a\mathbf{x}+b_{0}\mathbf{y}+c_{0}\mathbf{z}+d_{0}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The distance of point 
+\begin_inset Formula $P_{0}=\{x_{0},y_{0},z_{0}\}$
+\end_inset
+
+ to a plane 
+\begin_inset Formula $\Pi=a\mathbf{x}+b_{0}\mathbf{y}+c_{0}\mathbf{z}+d_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\Pi-P_{0}\right|=\frac{\left|ax_{0}+by_{0}+cz_{0}+d\right|}{\sqrt{a^{2}+b^{2}+c^{2}}}\label{eq:Plane_distance_equation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout NoteItem
+An equation plane only requires three non-collinear points
+\begin_inset Formula $\left\{ P_{1},P_{2},P_{3}\right\} $
+\end_inset
+
+ and we can solve the next system of equations to find the 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ variables.
+ usamos el vertice un desplazamietno alrededor de la normal y otro vertice
+ para calcular a b c.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+The new system of equations proposed
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+W_{L}L\\
+W_{H}\\
+\Pi_{1}\\
+\Pi_{2}
+\end{array}\right]X_{t+1}=\left[\begin{array}{c}
+0\\
+W_{H}X_{t}\\
+-D_{1}\\
+-D_{2}
+\end{array}\right]\label{eq:SkeletonExtractionDistance}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ are matrix that contain 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ values of the plane equation for every vertex.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $D_{1}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ are the vectors with 
+\begin_inset Formula $d$
+\end_inset
+
+ values of the plane equation for every vertex.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+User interface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/sjSkeletonizer01.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/sjSkeletonizer02.png
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+sjSkeletonizer is our prototype software application
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a result of this work, the software sjSkeletonizer permits the processing,
+ visualization and extraction of the skeleton from polygonal hybrid meshes
+ composed of triangles and quads.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename img/Skeletonizer_2.pdf
+	lyxscale 45
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Skeleton extracted from different models.
+ (a) Dog model (b) Character model.
+ (c) Person model.
+ (d) Clay model.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software para la Extracción del Esqueleto por Contracción y Suavizado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename img/poses.png
+	lyxscale 50
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Model with different poses and skeleton obtained with our skeleton extraction
+ software.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This work presented a novel extension of the Laplace Beltrami operator for
+ hybrid quad/triangle meshes, and the successful application of such principles
+ in different types of problems in computer geometric modeling like smoothing,
+ enhancing, sculpting, deformation, reposing and skeleton extraction.
+\end_layout
+
+\begin_layout Itemize
+A new sculpting brush to made a proper inflation while preserving the geometric
+ details in real-time sessions was proposed, implemented and tested.
+\end_layout
+
+\begin_layout Itemize
+We have largely demonstrated that our method has good performance, stability
+ and robustness of the extension proposed.
+\end_layout
+
+\begin_layout Itemize
+This novel extension of the Laplace Beltrami operator was introduced in
+ the computer modeling industry inside the Blender 3D computer graphics
+ software.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Acknowledgment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We wold like to thank CIM@LAB Research Group for their support of our research.
+\end_layout
+
+\begin_layout Itemize
+This work was supported in part by the Blender Foundation, Google Summer
+ of code program at 2012 and 2013.
+ 
+\end_layout
+
+\begin_layout Itemize
+Livingstone elephant model is provided courtesy of INRIA and ISTI by the
+ AIM@SHAPE Shape Repository.
+ Hand model is courtesy of the FarField Technology Ltd.
+ Camel model by Valera Ivanov is licensed under a Creative Commons Attribution
+ 3.0 Unported License.
+ Dinosaur and Monkey models are under public domain, courtesy of Blender
+ Foundation.
+\end_layout
+
+\begin_layout NoteItem
+Daniel Kreuter -> Female Head Model: http://www.blendswap.com/blends/view/69585
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status collapsed
+
+\begin_layout Plain Layout
+allowframebreaks
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Bibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size scriptsize
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "bibliography"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout PlainFrame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Thank you for coming today
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 5pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Questions?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

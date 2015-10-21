@@ -871,7 +871,7 @@ For which every point
 \begin_layout Plain Layout
 \align center
 A homeomorphism 
-\begin_inset Formula $\phi:\,\,\, N_{x}\rightarrow\mathbb{R}^{2}$
+\begin_inset Formula $\phi:\,\,\,N_{x}\rightarrow\mathbb{R}^{2}$
 \end_inset
 
 
@@ -1545,56 +1545,15 @@ triangles
 \end_layout
 
 \begin_layout Standard
-Desbrun's operator is the discretized version of the Laplace-Beltrami operator.
-\end_layout
-
-\begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename img/voronoi_region.pdf
-	width 50col%
+	filename img/proposal_desbrun.pdf
+	lyxscale 50
+	width 80col%
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-w_{ij}=\frac{1}{4A_{i}}\left(\cot\alpha_{j}+\cot\beta_{j}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $A_{i}$
-\end_inset
-
- is area of the 1-ring neighborhood.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\alpha$
-\end_inset
-
- and 
-\begin_inset Formula $\beta$
-\end_inset
-
- are the opposite angles to edge between vertex 
-\begin_inset Formula $v_{i}$
-\end_inset
-
- and vertex 
-\begin_inset Formula $v_{j}$
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
@@ -1607,7 +1566,7 @@ where
 status open
 
 \begin_layout Plain Layout
-2011 Xion's MLBO operator for quad meshes
+2011 Xiong's MLBO operator for quad meshes
 \end_layout
 
 \end_inset
@@ -1625,94 +1584,22 @@ quads
 \end_layout
 
 \begin_layout Standard
-Xion's operator is the mean of Desbrun's operator for all possible triangulation
-s for quad meshes.
+\begin_inset VSpace -10bp
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename img/quad_xiong.pdf
-	width 50col%
+	filename img/proposal_xiong.pdf
+	lyxscale 50
+	width 80col%
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="1">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $w_{ij}=\frac{1}{4A_{i}}\left(\cot\theta_{\left(j-1\right)1}+\cot\theta_{\left(j-1\right)4}+\cot\theta_{j3}+\cot\theta_{j6}\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $w_{ij'}=\frac{1}{2A_{i}}\left(\cot\theta_{j2}+\cot\theta_{j5}\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $A_{i}=\frac{1}{2}\underset{j\in i^{*}}{\sum}\left(A\left(t_{j2}\right)+A\left(t_{j2}\right)+A\left(t_{j3}\right)\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-where 
-\begin_inset Formula $w_{ij}$
-\end_inset
-
- are the weights of neighbors that share an edge with 
-\begin_inset Formula $v_{i}$
-\end_inset
-
- and 
-\begin_inset Formula $w_{ij'}$
-\end_inset
-
- are the weights of neighbors that share face with 
-\begin_inset Formula $v_{i}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout NoteItem
@@ -2318,7 +2205,7 @@ status open
 \end_inset
 
  is 
-\begin_inset Formula $t_{j1}^{*}\equiv\vartriangle v_{i}v_{j}v_{j}^{\prime},\, t_{j2}^{*}\equiv\vartriangle v_{i}v_{j}^{\prime}v_{j+1}$
+\begin_inset Formula $t_{j1}^{*}\equiv\vartriangle v_{i}v_{j}v_{j}^{\prime},\,t_{j2}^{*}\equiv\vartriangle v_{i}v_{j}^{\prime}v_{j+1}$
 \end_inset
 
  (b) Dual triangulation around 

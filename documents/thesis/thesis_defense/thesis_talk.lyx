@@ -601,6 +601,10 @@ if
 
 \end_layout
 
+\begin_layout Pause
+
+\end_layout
+
 \begin_layout Standard
 The basis 
 \begin_inset Formula $\mathbf{e}_{w}$
@@ -1874,6 +1878,293 @@ status open
 \end_layout
 
 \begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mathematical framework of our proposal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/proposal_kurvature.pdf
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Mathematical framework of our proposal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Xiong's mean average area
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/proposal_maa.pdf
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace Beltrami operator for hybrid quad/triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our Proposal
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -20bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img/proposal_tqbo_empty.pdf
+	width 100theight%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Laplace Beltrami operator for hybrid quad/triangle meshes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Our Proposal
+\end_layout
+
+\begin_layout Standard
+Area of hybrid region with quads 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+ and triangles 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ around 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\begin_inset Formula $A\left(v_{i}\right)=\underset{j=1}{\overset{m}{\sum}}A(q_{j})+\underset{k=1}{\overset{r}{\sum}}A(t_{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+Applyng Xiong's mean average area for quads
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\begin_inset Formula $A\left(v_{i}\right)=\frac{1}{2}\underset{j=1}{\overset{m}{\sum}}\left[A\left(t_{j1}^{*}\right)+A\left(t_{j2}^{*}\right)+A\left(t_{j3}^{*}\right)\right]+\underset{k=1}{\overset{r}{\sum}}A(t_{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+Applyng Laplace operator
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\begin_inset Formula $\Delta\left(v_{i}\right)=\frac{1}{2}\underset{j=1}{\overset{m}{\sum}}\left[\Delta\left(t_{j1}^{*}\right)+\Delta\left(t_{j2}^{*}\right)+\Delta\left(t_{j3}^{*}\right)\right]+\underset{k=1}{\overset{r}{\sum}}\Delta(t_{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+Rewriting 
+\begin_inset Formula $\Delta\left(v_{i}\right)$
+\end_inset
+
+ we define the 
+\series bold
+\shape slanted
+Triangle Quad Laplace Beltrami Operator
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\begin_inset Formula $\Delta\left(v_{i}\right)=\frac{1}{2A_{i}}\underset{j=1}{\overset{m}{\sum}}w_{ij}\left(v_{j}-v_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Weights for TQLBO - Our proposal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The 5 basic triangle-quad cases with a vertex 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ and the relationship with 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{j}^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -20bp
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset space \hspace{}
+\length -20bp
+\end_inset
+
+
+\begin_inset Graphics
+	filename img/proposal_weights.pdf
+	width 100page%
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
 
 \end_layout
 
@@ -2327,6 +2618,34 @@ where
 \end_inset
 
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+left[A
+\backslash
+left(t_{j1}^{*}
+\backslash
+right)+A
+\backslash
+left(t_{j2}^{*}
+\backslash
+right)+A
+\backslash
+left(t_{j3}^{*}
+\backslash
+right)
+\backslash
+right]
 \end_layout
 
 \begin_layout Standard

@@ -183,7 +183,7 @@ centering%
 
 \begin_layout Plain Layout
 
-%
+
 \backslash
 includegraphics[width=0.4
 \backslash
@@ -256,7 +256,7 @@ Universidad Nacional de Colombia
 \end_layout
 
 \begin_layout Standard
-Facultad de Ingeniería, Departamento de Sistemas e Industrial
+Facultad de Ingeniería, Departamento de Ingeniería de Sistemas e Industrial
 \end_layout
 
 \begin_layout Standard
@@ -2626,7 +2626,7 @@ name "PAPER:fig:quad_xiong"
 \end_inset
 
 
-\begin_inset Formula $t_{j1}^{*}\equiv\vartriangle v_{i}v_{j}v_{j}^{\prime},\, t_{j2}^{*}\equiv\vartriangle v_{i}v_{j}^{\prime}v_{j+1},\, t_{j3}^{*}\equiv\vartriangle v_{i}v_{j}v_{j+1}$
+\begin_inset Formula $t_{j1}^{*}\equiv\vartriangle v_{i}v_{j}v_{j}^{\prime},\,t_{j2}^{*}\equiv\vartriangle v_{i}v_{j}^{\prime}v_{j+1},\,t_{j3}^{*}\equiv\vartriangle v_{i}v_{j}v_{j+1}$
 \end_inset
 
  Triangulations of the quad with common vertex 
@@ -3213,7 +3213,7 @@ allows to scale the vertices to:
 \begin_layout Standard
 \noindent
 \align center
-\begin_inset Formula $v_{i\, new}^{t+1}=\beta\left(v_{i}^{t+1}-\overline{v}\right)+\overline{v}$
+\begin_inset Formula $v_{i\,new}^{t+1}=\beta\left(v_{i}^{t+1}-\overline{v}\right)+\overline{v}$
 \end_inset
 
  

@@ -1,0 +1,282 @@
+@article {Vallet2008,
+author = {Vallet, B. and L{\'e}vy, B.},
+title = {Spectral Geometry Processing with Manifold Harmonics},
+journal = {Computer Graphics Forum},
+volume = {27},
+number = {2},
+publisher = {Blackwell Publishing Ltd},
+issn = {1467-8659},
+url = {http://dx.doi.org/10.1111/j.1467-8659.2008.01122.x},
+doi = {10.1111/j.1467-8659.2008.01122.x},
+pages = {251--260},
+keywords = {I.3.5 [Computer Graphics], Computational Geometry and Object Modeling, Hierarchy and geometric transformations},
+year = {2008},
+abstract = {We present an explicit method to compute a generalization of the Fourier Transform on a mesh. It is well known that the eigenfunctions of the Laplace Beltrami operator (Manifold Harmonics) define a function basis allowing for such a transform. However, computing even just a few eigenvectors is out of reach for meshes with more than a few thousand vertices, and storing these eigenvectors is prohibitive for large meshes. To overcome these limitations, we propose a band-by-band spectrum computation algorithm and an out-of-core implementation that can compute thousands of eigenvectors for meshes with up to a million vertices. We also propose a limited-memory filtering algorithm, that does not need to store the eigenvectors. Using this latter algorithm, specific frequency bands can be filtered, without needing to compute the entire spectrum. Finally, we demonstrate some applications of our method to interactive convolution geometry filtering. These technical achievements are supported by a solid yet simple theoretic framework based on Discrete Exterior Calculus (DEC). In particular, the issues of symmetry and discretization of the operator are considered with great care.},
+}
+@INPROCEEDINGS{Taubin1995,
+  author = {Taubin, Gabriel},
+  title = {A signal processing approach to fair surface design},
+  booktitle = {Proceedings of the 22nd annual conference on Computer graphics and
+	interactive techniques},
+  year = {1995},
+  series = {SIGGRAPH '95},
+  pages = {351--358},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  abstract = {In this paper we describe a new tool for interactive free-form fair
+	surface design. By generalizing classical discrete Fourier analysis
+	to two-dimensional discrete surface signals -- functions defined
+	on polyhedral surfaces of arbitrary topology --, we reduce the problem
+	of surface smoothing, or fairing, to low-pass filtering. We describe
+	a very simple surface signal low-pass filter algorithm that applies
+	to surfaces of arbitrary topology. As opposed to other existing optimization-based
+	fairing methods, which are computationally more expensive, this is
+	a linear time and space complexity algorithm. With this algorithm,
+	fairing very large surfaces, such as those obtained from volumetric
+	medical data, becomes affordable. By combining this algorithm with
+	surface subdivision methods we obtain a very effective fair surface
+	design technique. We then extend the analysis, and modify the algorithm
+	accordingly, to accommodate different types of constraints. Some
+	constraints can be imposed without any modification of the algorithm,
+	while others require the solution of a small associated linear system
+	of equations. In particular, vertex location constraints, vertex
+	normal constraints, and surface normal discontinuities across curves
+	embedded in the surface, can be imposed with this technique. CR Categories
+	and Subject Descriptors: I.3.3 [Computer Graphics]: Picture/image
+	generation - display algorithms; I.3.5 [Computer Graphics]: Computational
+	Geometry and Object Modeling - curve, surface, solid, and object
+	representations;J.6[Com- puter Applications]: Computer-Aided Engineering
+	- computeraided design General Terms: Algorithms, Graphics. 1},
+  acmid = {218473},
+  doi = {http://doi.acm.org/10.1145/218380.218473},
+  file = {:./Taubin1995/Taubin-sg95.pdf:PDF},
+  isbn = {0-89791-701-4},
+  keywords = {graphics},
+  numpages = {8},
+  owner = {apinzonf},
+  timestamp = {2011.09.15},
+  url = {http://doi.acm.org/10.1145/218380.218473}
+}
+@book{Botsch2010,
+  title={Polygon mesh processing},
+  author={Botsch, Mario and Kobbelt, Leif and Pauly, Mark and Alliez, Pierre and L{\'e}vy, Bruno},
+  year={2010},
+  publisher={CRC press}
+}
+@inproceedings{Levy2010,
+ author = {L{\'e}vy, Bruno and Zhang, Hao (Richard)},
+ title = {Spectral Mesh Processing},
+ booktitle = {ACM SIGGRAPH 2010 Courses},
+ series = {SIGGRAPH '10},
+ year = {2010},
+ isbn = {978-1-4503-0395-8},
+ location = {Los Angeles, California},
+ pages = {8:1--8:312},
+ articleno = {8},
+ numpages = {312},
+ url = {http://doi.acm.org/10.1145/1837101.1837109},
+ doi = {10.1145/1837101.1837109},
+ acmid = {1837109},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+@INPROCEEDINGS{Desbrun1999,
+  author = {Desbrun,, Mathieu and Meyer,, Mark and Schroder,, Peter and Barr,, Alan H.},
+  title = {Implicit fairing of irregular meshes using diffusion and curvature flow},
+  booktitle = {SIGGRAPH '99: Proceedings of the 26th annual conference on Computer	graphics and interactive techniques},
+  year = {1999},
+  pages = {317--324},
+  address = {New York, NY, USA},
+  publisher = {ACM Press/Addison-Wesley Publishing Co.},
+  abstract = {In this paper, we develop methods to rapidly remove rough features
+	from irregularly triangulated data intended to portray a smooth surface.
+	The main task is to remove undesirable noise and uneven edges while
+	retaining desirable geometric features. The problem arises mainly
+	when creating high-?delity computer graphics objects using imperfectly-measured
+	data from the real world. Our approach contains three novel features:
+	an implicit integration method to achieve ef?ciency, stability, and
+	large time-steps; a scale-dependent Laplacian operator to improve
+	the diffusion process; and ?nally, a robust curvature ?ow operator
+	that achieves a smoothing of the shape itself, distinct from any
+	parameterization. Additional features of the algorithm include automatic
+	exact volume preservation, and hard and soft constraints on the positions
+	of the points in the mesh. We compare our method to previous operators
+	and related algorithms, and prove that our curvature and Laplacian
+	operators have several mathematically-desirable qualities that improve
+	the appearance of the resulting surface. In consequence, the user
+	can easily select the appropriate operator according to the desired
+	type of fairing. Finally, we provide a series of examples to graphically
+	and numerically demonstrate the quality of our results},
+  doi = {http://doi.acm.org/10.1145/311535.311576},
+  file = {:./Desbrun1999/ImplicitFairing.pdf:PDF},
+  isbn = {0-201-48560-5},
+  othernote = {Skeleton Extraction},
+  owner = {apinzonf},
+  timestamp = {2009.04.30}
+}
+@article{Floater2003,
+title = "Mean value coordinates ",
+journal = "Computer Aided Geometric Design ",
+volume = "20",
+number = "1",
+pages = "19 - 27",
+year = "2003",
+note = "",
+issn = "0167-8396",
+doi = "http://dx.doi.org/10.1016/S0167-8396(03)00002-5",
+url = "http://www.sciencedirect.com/science/article/pii/S0167839603000025",
+author = "Michael S. Floater",
+keywords = "Barycentric coordinates",
+keywords = "Harmonic function",
+keywords = "Mean value theorem",
+keywords = "Parameterization",
+keywords = "Morphing ",
+abstract = "We derive a generalization of barycentric coordinates which allows a vertex in a planar triangulation to be expressed as a convex combination of its neighbouring vertices. The coordinates are motivated by the Mean Value Theorem for harmonic functions and can be used to simplify and improve methods for parameterization and morphing. "
+}
+@InCollection{Xiong2011,
+  Title                    = {Mean Laplace-Beltrami Operator for Quadrilateral Meshes},
+  Author                   = {Xiong, Yunhui and Li, Guiqing and Han, Guoqiang},
+  Booktitle                = {Transactions on Edutainment V},
+  Publisher                = {Springer Berlin / Heidelberg},
+  Year                     = {2011},
+  Editor                   = {Pan, Zhigeng and Cheok, Adrian and Muller, Wolfgang and Yang, Xubo},
+  Pages                    = {189-201},
+  Series                   = {Lecture Notes in Computer Science},
+  Volume                   = {6530},
+
+  Abstract                 = {This paper proposes a discrete approximation of Laplace-Beltrami operator for quadrilateral meshes which we name as mean Laplace-Beltrami operator (MLBO). Given vertex p and its quadrilateral 1-neighborhood N ( p ), the MLBO of p is defined as the average of the LBOs defined on all triangulations of N ( p ) and ultimately expressed as a linear combination of 1-neighborhood vertices. The operator is quite simple and numerically convergent. Its weights are symmetric, and easily modified to positive. Several examples are presented to show its applications.},
+  Affiliation              = {School of Computer Science & Engineering, South China Univ. of Tech., Guangzhou, China},
+  File                     = {:E\:\\personal\\maestria\\tesis\\Jeronimo\\trunk\\documents\\thesis\\TQLBO-paper\\papers\\Xiong2011\\2011_Mean Laplace-Beltrami.pdf:PDF},
+  ISBN                     = {978-3-642-18451-2},
+  Keyword                  = {Computer Science}
+}
+@Article{Pinkall1993,
+  Title                    = {Computing Discrete Minimal Surfaces and Their Conjugates},
+  Author                   = {Ulrich Pinkall and Strasse Des Juni and Konrad Polthier},
+  Journal                  = {Experimental Mathematics},
+  Year                     = {1993},
+  Pages                    = {15--36},
+  Volume                   = {2},
+
+  Abstract                 = {We present a new algorithm to compute stable discrete minimal surfaces bounded by a number of fixed or free boundary curves in R 3, S 3 and H 3. The algorithm makes no restriction on the genus and can handle singular triangulations. For a discrete harmonic map a conjugation process is presented leading in case of minimal surfaces additionally to instable solutions of the free boundary value problem for minimal surfaces. Symmetry properties of boundary curves are respected during conjugation.},
+  File                     = {:E\:\\personal\\maestria\\tesis\\Jeronimo\\trunk\\documents\\thesis\\TQLBO-paper\\papers\\Pinkall1993\\Pinkall1993.pdf:PDF},
+  Owner                    = {apinzonf},
+  Timestamp                = {2012.10.05}
+}
+@InCollection{Meyer2003,
+  Title                    = {Discrete Differential-Geometry Operators for Triangulated 2-Manifolds},
+  Author                   = {Mark Meyer and Mathieu Desbrun and Peter Schroder and Alan H. Barr},
+  Booktitle                = {Visualization and Mathematics III},
+  Publisher                = {Springer-Verlag},
+  Year                     = {2003},
+
+  Address                  = {Heidelberg},
+  Editor                   = {Hans-Christian Hege and Konrad Polthier},
+  Pages                    = {35--57},
+
+  Abstract                 = {This paper provides a unified and consistent set of flexible tools to approximate important geometric attributes, including normal vectors and curvatures on arbitrary triangle meshes. We present a consistent derivation of these first and second order differential properties using averaging Voronoi cells and the mixed Finite-Element/FiniteVolume method, and compare them to existing formulations. Building upon previous work in discrete geometry, these new operators are closely related to the continuous case, guaranteeing an appropriate extension from the continuous to the discrete setting: they respect most intrinsic properties of the continuous differential operators.},
+  File                     = {:E\:\\personal\\maestria\\tesis\\Jeronimo\\trunk\\documents\\thesis\\TQLBO-paper\\papers\\Meyer2003\\Meyer2003.pdf:PDF},
+  Owner                    = {apinzonf},
+  Timestamp                = {2012.10.09}
+}
+@Book{Mullen2007,
+  Title                    = {Introducing character animation with Blender},
+  Author                   = {Mullen, Tony},
+  Publisher                = {Indianapolis, Ind. Wiley Pub. cop.},
+  Year                     = {2007},
+
+  ISBN                     = {978-0-470-10260-2},
+  Pages                    = {28--29},
+  Url                      = {http://opac.inria.fr/record=b1122208}
+}
+@Misc{blender,
+  Title                    = {Blender open source 3D application for modeling, animation, rendering, compositing, video editing and game creation.},
+
+  Author                   = {Blender-Foundation},
+  HowPublished             = {http://www.blender.org/},
+  Year                     = {2012},
+
+  Owner                    = {FundacionScire},
+  Timestamp                = {2012.11.08}
+}
+@MISC{Pinzon2010,
+  author = {Alexander Pinzon and Eduardo Romero},
+  title = {Análisis Experimental de la Extracci{\'o}n del Esqueleto por Contracci{\'o}n	con Suavizado Laplaciano},
+  month = {December},
+  year = {2010},
+  note = {Poster presented at 6th International Seminar on Medical Image Processing
+	and Analysis (SIPAIM 2010), December 1--4, Universidad Nacional de
+	Colombia, Bogota, Colombia.},
+  owner = {apinzonf},
+  timestamp = {2014.05.27}
+}
+
+@ARTICLE{Pinzon2013,
+  author = {Alexander Pinzon and Eduardo Romero},
+  title = {Shape Inflation with an Adapted Laplacian Operator for Hybrid Quad/Triangle
+	Meshes},
+  journal = {2013 26th SIBGRAPI Conference on Graphics, Patterns and Images},
+  year = {2013},
+  volume = {0},
+  pages = {179-186},
+  address = {Los Alamitos, CA, USA},
+  doi = {http://doi.ieeecomputersociety.org/10.1109/SIBGRAPI.2013.33},
+  issn = {1530-1834},
+  owner = {apinzonf},
+  publisher = {IEEE Computer Society},
+  timestamp = {2014.05.16}
+}
+
+@MISC{Pinzon2012,
+  author = {Alexander Pinzon and Eduardo Romero},
+  title = {sjSkeletonizer: Skeleton Extraction software.},
+  month = {March},
+  year = {2012},
+  note = {http://code.google.com/p/jeronimo/},
+  owner = {apinzonf},
+  timestamp = {2014.05.28}
+}
+
+@MISC{Pinzon2011,
+  author = {Alexander Pinzon and Eduardo Romero},
+  title = {Software para la Extracci{\'o}n del Esqueleto por Contracci{\'o}n y Suavizado},
+  month = {December},
+  year = {2011},
+  note = {Poster presented at 7th International Seminar on Medical Image Processing
+	and Analysis (SIPAIM 2011), December 6--8, Universidad Industrial
+	de Santander, Bucaramanga, Colombia.},
+  owner = {apinzonf},
+  timestamp = {2014.05.27}
+}
+@ARTICLE{Au2008,
+  author = {Oscar Kin-Chung Au and Chiew-Lan Tai and Hung-Kuo Chu and Daniel
+	Cohen-Or and Tong-Yee Lee},
+  title = {Skeleton Extraction by Mesh Contraction},
+  journal = {ACM Transactions on Graphics},
+  year = {2008},
+  volume = {27},
+  pages = {10},
+  number = {3},
+  abstract = {Extraction of curve-skeletons is a fundamental problem with many applications
+	in computer graphics and visualization. In this paper, we present
+	a simple and robust skeleton extraction method based on mesh contraction.
+	The method works directly on the mesh domain, without pre-sampling
+	the mesh model into a volumetric representation. The method first
+	contracts the mesh geometry into a zero-volume skeletal shape by
+	applying implicit Laplacian smoothing with global positional constraints.
+	The contraction does not alter the mesh connectivity and retains
+	the key features of the original mesh. The contracted mesh is then
+	converted into a 1D curve-skeleton through a connectivity surgery
+	process to remove all the collapsed faces while preserving the shape
+	of the contracted mesh and the original topology. The centeredness
+	of the skeleton is refined by exploiting the induced skeleton-mesh
+	mapping. The contraction process generates valuable information about
+	the object's geometry, in particular, the skeleton-vertex correspondence
+	and the local thickness, which are useful for various applications.
+	We demonstrate its effectiveness in mesh segmentation and skinning
+	animation.},
+  file = {:./Au2008/skeleton_sig08.pdf:PDF},
+  othernote = {Skeleton Extraction},
+  owner = {apinzonf},
+  timestamp = {2009.03.17}
+}

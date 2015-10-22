@@ -1,0 +1,78 @@
+
+El uso del operador laplaciano para realizar procesamiento de mallas de polygonos, comenzo con el trabajo de taubin en 1995 quien propuso un operador para remosion de ruido que se comportaba como un filtro IIR??? con base en el mismo principio de la transformada de fourier.
+este operador era represntado por una matrix cuyos eigenvectores constituian una descomposicion espectral de la malla de polygonos.
+
+esta simple idea permitia a nuevos autores proponer nuevas versiones discretas del operador de laplace que permitieran realizar 
+
+
+Con el operador de laplace se han desarrollado complejas aplicaciones durante los ultimos anos para los software de modelamiento y animacion en la industria 3d.
+
+esta son algunas de las aplicaciones que usan el operador de laplace ....
+...
+
+el flujo de trabajado de una de estas aplicaciones es en general asi
+input (hybrid mesh) - convert mesh to triangles - laplacian processing - (retrieve original topology) - output
+
+why is importan to conserve original topology
+
+let me show to you, what do an artist when modelling 3d objects.
+
+the artist realizan un uso extensivo de loop edfe faces, que son lineas representativas que permiten visualmente describir formas que son mas faciles de entender y animar.
+ 
+un ejemplo
+ 
+nuestra contribucion
+  
+
+
+Good afternoon and thank you for coming today
+
+
+
+
+
+Que se puede hacer con el operador discreto de Laplace beltrami se puede obtener una descomposicion espectral con las siguientes aplicaciones
+
+INTERES EN EL AREA DE INVESTIGACION 
+
+El procesamiento en mallas de poligonos se puede realizar en forma analoga a como se prosesan senales con fourier gracias al trbajo de taubin en 1995 para suavizar remover ruido en mallas de poligonos.
+
+Que propuso un operador discreto con base en la analogia que encontro entre los egigenvectores del operador laplaciano y la transformada de fourier vista con los eigenfucniones de la segunda derivada
+
+El operador de laplace discreto  propuesto por Taubin permitia encontrar los eigenvectores de las señal implicita en los datos de la malla de poligonos.
+
+Nuevos trabajos basados en la idea de taubin realizaron discretizaciones del operador de Laplace-Beltrami para superficies que son dominios suaves homemorfos a R2.
+
+Procesamiento de mallas de poligonos
+Taubin 1995
+Fourier Transform 
+Second derivate
+Eigenvectors
+Smoothing - Enhancing
+Laplace-Beltrami Operator
+
+
+
+
+
+PLANTEAMIENTO DEL PROBLEMA
+Discrete Laplacian Operator
+Manifold-Surface-Homeomorphic_To_Rn
+
+Pinkall
+Desbrun
+Xiong
+designers
+Edge loops for faces
+Polygonal Mesh
+Triangle Quads
+
+
+
+
+
+CONTRIBUCION
+Laplacian Applications
+
+How a motivation we show some important applications of discrete laplace operator.
+We show  some important applications of Discrete Laplace Operator as an initial motivation.

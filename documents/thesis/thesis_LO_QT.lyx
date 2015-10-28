@@ -270,7 +270,7 @@ Bogotá, Colombia
 \end_layout
 
 \begin_layout Standard
-2014
+2015
 \end_layout
 
 \begin_layout Standard
@@ -419,7 +419,7 @@ Universidad Nacional de Colombia
 \begin_inset Newline newline
 \end_inset
 
-Facultad de Ingeniería, Departamento de Sistemas e Industrial
+Facultad de Ingeniería, Departamento de Ingeniería de Sistemas e Industrial
 \begin_inset Newline newline
 \end_inset
 
@@ -431,7 +431,7 @@ Bogotá, Colombia
 \begin_inset Newline newline
 \end_inset
 
-2014
+2015
 \end_layout
 
 \begin_layout Standard
@@ -528,7 +528,7 @@ A mis padres
 \end_layout
 
 \begin_layout Plain Layout
-Beatriz Fernandez Vargas
+Beatriz Fernández Vargas
 \end_layout
 
 \begin_layout Plain Layout
@@ -763,7 +763,8 @@ El operador propuesto fue usado con exitoso en las nuevas herramientas del
 
 \series bold
 \size small
-Keywords: laplacian operator; smooth; enhance; sculpting; subdivision surface
+Keywords: laplacian operator; smooth; enhance; sculpting; spectral mesh
+ processing
 \end_layout
 
 \begin_layout Standard

@@ -79,109 +79,110 @@ Master in Systems Engineering and Computer Science}
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Spectral Mesh Processing}
 
+%\begin{frame}{Spectral Mesh Processing}
+%
+%
+%Taubin in 1995 suggested that the\textbf{ Discrete Laplace Operator}
+%allows  \textit{Spectral Processing} on \textbf{Polygonal Meshes}
+%in an analogous way to signal processing with the Fourier transform.
+%
+%
+%\begin{center}
+%\begin{figure}
+%\includegraphics[width=1\textwidth]{img/Gargola_Smoothing_And_Enhance}
+%
+%\protect\caption{Original Mesh, Low-pass and enhancement filters {[}Vallet08{]}.}
+%\end{figure}
+%
+%\par\end{center}
+%
+%
+%\note[item]{The eigenvalues of Laplace operator are called the \textit{natural
+%frequencies} and the eigenvectors are called the \textit{natural vibrations}
+%{[}Taubin 1995{]}.}
+%
+%
+%\note[item]{WhySpectral? Adifferentwaytolookatfunctionsonadomain}
+%
+%
+%\note[item]{Taubin in 1995 proposed that is possible to process polygonal meshes
+%in an analogous way to how signals are processed with the Fourier
+%transform.\\
+%En 1995 Taubin propuso que era posible procesar mallas de polígonos
+%de una manera análoga a como se procesas señales con la transformada
+%de Fourier. \\
+%\\
+%Taubin observo que los componentes en frecuencia de la transformada
+%de Fourier podían ser descritos como la decomposition of the signal
+%into a linear combination of the eigenvetors of the Laplacian operador.
+%\\
+%\\
+%Taubin definio un nuevo operador discreto que tomaría el lugar del
+%operador Laplaciano para suavizar poligonal meshes. \\
+%\\
+%Pinkall , Desbrun y otros autores definieron nuevas versiones discretas
+%del operador Laplaciano pero tomaron en cuenta la definición del Bernoulli
+%del operador Laplaciano la cual lo toma como la divergencia del gradiente
+%de una superficie. \\
+%\\
+%Hoy dia se cuenta con representaciones discretas del operador de Laplace
+%Beltrami para procesar mallas de polígonos compuestas por triángulos
+%o por cuadrángulos Nosotros proponemos una adaptación para poder trabajar
+%mallas de polígonos hibridas compuestas por triángulos y cuadrángulos
+%que permitan realizar una aproximación espectral al procesamiento
+%de mallas de polígonos. }
+%
+%
+%\note[item]{Taubin (1995) suggested that the frequency components of the Fourier
+%transform could be described as decomposition of the signal into a
+%linear combination of the eigenvectors of the Laplacian operator.}
+%
+%\end{frame}
 
-Taubin in 1995 suggested that the\textbf{ Discrete Laplace Operator}
-allows  \textit{Spectral Processing} on \textbf{Polygonal Meshes}
-in an analogous way to signal processing with the Fourier transform.
-
-
-\begin{center}
-\begin{figure}
-\includegraphics[width=1\textwidth]{img/Gargola_Smoothing_And_Enhance}
-
-\protect\caption{Original Mesh, Low-pass and enhancement filters {[}Vallet08{]}.}
-\end{figure}
-
-\par\end{center}
-
-
-\note[item]{The eigenvalues of Laplace operator are called the \textit{natural
-frequencies} and the eigenvectors are called the \textit{natural vibrations}
-{[}Taubin 1995{]}.}
-
-
-\note[item]{WhySpectral? Adifferentwaytolookatfunctionsonadomain}
-
-
-\note[item]{Taubin in 1995 proposed that is possible to process polygonal meshes
-in an analogous way to how signals are processed with the Fourier
-transform.\\
-En 1995 Taubin propuso que era posible procesar mallas de polígonos
-de una manera análoga a como se procesas señales con la transformada
-de Fourier. \\
-\\
-Taubin observo que los componentes en frecuencia de la transformada
-de Fourier podían ser descritos como la decomposition of the signal
-into a linear combination of the eigenvetors of the Laplacian operador.
-\\
-\\
-Taubin definio un nuevo operador discreto que tomaría el lugar del
-operador Laplaciano para suavizar poligonal meshes. \\
-\\
-Pinkall , Desbrun y otros autores definieron nuevas versiones discretas
-del operador Laplaciano pero tomaron en cuenta la definición del Bernoulli
-del operador Laplaciano la cual lo toma como la divergencia del gradiente
-de una superficie. \\
-\\
-Hoy dia se cuenta con representaciones discretas del operador de Laplace
-Beltrami para procesar mallas de polígonos compuestas por triángulos
-o por cuadrángulos Nosotros proponemos una adaptación para poder trabajar
-mallas de polígonos hibridas compuestas por triángulos y cuadrángulos
-que permitan realizar una aproximación espectral al procesamiento
-de mallas de polígonos. }
-
-
-\note[item]{Taubin (1995) suggested that the frequency components of the Fourier
-transform could be described as decomposition of the signal into a
-linear combination of the eigenvectors of the Laplacian operator.}
-
-\end{frame}
-
-\begin{frame}{Laplacian of the Fourier transform}
-
-
-if $\mathbf{u}$ is a eigenfunction and $\lambda$ is a corresponding
-eigenvalue of a linear differential operator\textbf{ $\mathbf{A}$}
-then
-
-
-\begin{center}
-$\mathbf{Au}=\lambda\mathbf{u},\,\,\,\mathbf{u}\neq0$
-\par\end{center}
-
-\pause{}
- 
-The basis $\mathbf{e}_{w}=\mathbf{e}^{2\pi iwx}=\cos\left(2\pi wx\right)-i\sin\left(2\pi wx\right)$ sine and cosine functions of the Fourier
-transform are eigenfunctions of the Laplacian with eigenvalue $\lambda_{w}$ 
-
-
-\begin{center}
-$\Delta\left(\mathbf{e}_{w}\right)=\frac{\partial^{2}}{\partial x^{2}}\mathbf{e}_{w}=-\left(2\pi w\right)^{2}\mathbf{e}_{w}=\lambda_{w}\mathbf{e}_{w}$
-\par\end{center}
-
-
-\begin{center}
-$\Delta\left(\mathbf{e}_{w}\right)=\lambda_{w}\mathbf{e}_{w}$
-\par\end{center}
-
-
-\note[item]{Inner product $\left\langle f,\mathbf{e}_{w}\right\rangle $}
-
-
-\note[item]{A widely used class of linear operators acting on infinite dimensional
-spaces are the differential operators on function spaces. Let D be
-a linear differential operator on the space \textbackslash{}mathbf\{C\textasciicircum{}\textbackslash{}infty\}
-of infinitely differentiable real functions of a real argument t.
-The eigenvalue equation for D is the differential equation https://en.wikipedia.org/wiki/Eigenvalues\_and\_eigenvectors\#Generalizations\_to\_infinite-dimensional\_spaces}
-
-
-\note[item]{Taubin analogy between Fourier transform and eigenvectors of Laplacian
-operator}
-
-
-\end{frame}
+%\begin{frame}{Laplacian of the Fourier transform}
+%
+%
+%if $\mathbf{u}$ is a eigenfunction and $\lambda$ is a corresponding
+%eigenvalue of a linear differential operator\textbf{ $\mathbf{A}$}
+%then
+%
+%
+%\begin{center}
+%$\mathbf{Au}=\lambda\mathbf{u},\,\,\,\mathbf{u}\neq0$
+%\par\end{center}
+%
+%\pause{}
+% 
+%The basis $\mathbf{e}_{w}=\mathbf{e}^{2\pi iwx}=\cos\left(2\pi wx\right)-i\sin\left(2\pi wx\right)$ sine and cosine functions of the Fourier
+%transform are eigenfunctions of the Laplacian with eigenvalue $\lambda_{w}$ 
+%
+%
+%\begin{center}
+%$\Delta\left(\mathbf{e}_{w}\right)=\frac{\partial^{2}}{\partial x^{2}}\mathbf{e}_{w}=-\left(2\pi w\right)^{2}\mathbf{e}_{w}=\lambda_{w}\mathbf{e}_{w}$
+%\par\end{center}
+%
+%
+%\begin{center}
+%$\Delta\left(\mathbf{e}_{w}\right)=\lambda_{w}\mathbf{e}_{w}$
+%\par\end{center}
+%
+%
+%\note[item]{Inner product $\left\langle f,\mathbf{e}_{w}\right\rangle $}
+%
+%
+%\note[item]{A widely used class of linear operators acting on infinite dimensional
+%spaces are the differential operators on function spaces. Let D be
+%a linear differential operator on the space \textbackslash{}mathbf\{C\textasciicircum{}\textbackslash{}infty\}
+%of infinitely differentiable real functions of a real argument t.
+%The eigenvalue equation for D is the differential equation https://en.wikipedia.org/wiki/Eigenvalues\_and\_eigenvectors\#Generalizations\_to\_infinite-dimensional\_spaces}
+%
+%
+%\note[item]{Taubin analogy between Fourier transform and eigenvectors of Laplacian
+%operator}
+%
+%
+%\end{frame}
 
 \begin{frame}{Laplace-Beltrami operator}
 
@@ -338,91 +339,91 @@ of the discrete versions of the Laplace-Beltrami operator.}
 
 \end{frame}
 
-\begin{frame}{Desired properties for Laplacian matrix}
-
-
-This properties ensure the construction of eigenstructure of Laplacian
-matrix and then those eigenvectors of L matrix are an orthogonal basis
-of $\mathbb{R}{}^{n}$
-\begin{itemize}
-\item Symmetry.
-\item Square.
-\item Locality.
-\item Positive Weights.
-\item Positive Semi-Definiteness.
-\item Convergence.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Eigenstructure of Laplacian matrix}
-
-
-\begin{center}
-$L\mathbf{e_{i}}=\lambda_{i}\mathbf{e_{i}},\,\,\,\mathbf{e_{i}}\neq0$
-\par\end{center}
-\begin{itemize}
-\item The eigenvector $\mathbf{e}_{i}$ of $L$ is a \textbf{\textsl{natural
-vibration}} of the mesh {[}Taubin95{]}.
-\item The frequency of the wave $\mathbf{e}_{i}$ is the eigenvalue $\lambda_{i}$
-of $L$ that is the \textbf{\textsl{natural frequency }}{[}Taubin95{]}.
-\end{itemize}
-
-\begin{figure}
-\includegraphics[width=1.0\textwidth]{img/Harmoni_Eigenvectors_dog}
-
-\protect\caption{Color values are the amplitude of a wave $\mathbf{e}_{i}$ projected
-on the mesh {[}Vallet08{]}.}
-
-
-\end{figure}
-
-
-\note[item]{Since the matrix L is symmetric and positive semi-definite (see Section
-A.1), its eigenvectors build an orthogonal basis of IRn, such that
-we can exactly represent each vector f = (f1, . . . , fn)T in this
-basis: {[}botsh 2010{]}}
-
-
-\note[item]{la multiplicacion del vector f por un vector base e, lo lleva al
-espacio representado por L}
-
-
-\note[item]{The \textsl{k}th entry of $\mathbf{e}_{i}$ corresponds to the amplitude
-of the wave $\mathbf{e}_{i}$ at vertex $v_{k}$.}
-
-
-\note[item]{Si A: V → V es un operador lineal en un cierto \textbackslash{}scriptstyle
-\textbackslash{}mathbb\{K\}espacio vectorial V, v≠0 es un vector diferente
-de cero en V y c es un escalar tales que}
-
-
-\note[item]{• The eigenvectors of L are a basis of \textbackslash{}mathbb\{R\}\textasciicircum{}\{n\}
-.}
-
-\end{frame}
-
-\begin{frame}{Mesh reconstruction}
-
-
-The mesh $\mathbf{M}$ can be reconstructed from its spectral decomposition as the  Fourier transform does.
-
-
-\begin{center}
-$\mathbf{M}=\underset{i=1}{\overset{n}{\sum}}\left\langle \mathbf{e}_{i},\mathbf{M}\right\rangle \mathbf{e_{i}}$
-\par\end{center}
-
-
-\begin{figure}
-\includegraphics[width=1\textwidth]{img/Reconstructions_With_Eigenvectors}
-
-\protect\caption{Mesh reconstruction with first $n$ eigenvectors of the Discrete Laplacian
-Operator {[}Levy10{]}.}
-
-
-\end{figure}
-
-
-\end{frame}
+%\begin{frame}{Desired properties for Laplacian matrix}
+%
+%
+%This properties ensure the construction of eigenstructure of Laplacian
+%matrix and then those eigenvectors of L matrix are an orthogonal basis
+%of $\mathbb{R}{}^{n}$
+%\begin{itemize}
+%\item Symmetry.
+%\item Square.
+%\item Locality.
+%\item Positive Weights.
+%\item Positive Semi-Definiteness.
+%\item Convergence.
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Eigenstructure of Laplacian matrix}
+%
+%
+%\begin{center}
+%$L\mathbf{e_{i}}=\lambda_{i}\mathbf{e_{i}},\,\,\,\mathbf{e_{i}}\neq0$
+%\par\end{center}
+%\begin{itemize}
+%\item The eigenvector $\mathbf{e}_{i}$ of $L$ is a \textbf{\textsl{natural
+%vibration}} of the mesh {[}Taubin95{]}.
+%\item The frequency of the wave $\mathbf{e}_{i}$ is the eigenvalue $\lambda_{i}$
+%of $L$ that is the \textbf{\textsl{natural frequency }}{[}Taubin95{]}.
+%\end{itemize}
+%
+%\begin{figure}
+%\includegraphics[width=1.0\textwidth]{img/Harmoni_Eigenvectors_dog}
+%
+%\protect\caption{Color values are the amplitude of a wave $\mathbf{e}_{i}$ projected
+%on the mesh {[}Vallet08{]}.}
+%
+%
+%\end{figure}
+%
+%
+%\note[item]{Since the matrix L is symmetric and positive semi-definite (see Section
+%A.1), its eigenvectors build an orthogonal basis of IRn, such that
+%we can exactly represent each vector f = (f1, . . . , fn)T in this
+%basis: {[}botsh 2010{]}}
+%
+%
+%\note[item]{la multiplicacion del vector f por un vector base e, lo lleva al
+%espacio representado por L}
+%
+%
+%\note[item]{The \textsl{k}th entry of $\mathbf{e}_{i}$ corresponds to the amplitude
+%of the wave $\mathbf{e}_{i}$ at vertex $v_{k}$.}
+%
+%
+%\note[item]{Si A: V → V es un operador lineal en un cierto \textbackslash{}scriptstyle
+%\textbackslash{}mathbb\{K\}espacio vectorial V, v≠0 es un vector diferente
+%de cero en V y c es un escalar tales que}
+%
+%
+%\note[item]{• The eigenvectors of L are a basis of \textbackslash{}mathbb\{R\}\textasciicircum{}\{n\}
+%.}
+%
+%\end{frame}
+%
+%\begin{frame}{Mesh reconstruction}
+%
+%
+%The mesh $\mathbf{M}$ can be reconstructed from its spectral decomposition as the  Fourier transform does.
+%
+%
+%\begin{center}
+%$\mathbf{M}=\underset{i=1}{\overset{n}{\sum}}\left\langle \mathbf{e}_{i},\mathbf{M}\right\rangle \mathbf{e_{i}}$
+%\par\end{center}
+%
+%
+%\begin{figure}
+%\includegraphics[width=1\textwidth]{img/Reconstructions_With_Eigenvectors}
+%
+%\protect\caption{Mesh reconstruction with first $n$ eigenvectors of the Discrete Laplacian
+%Operator {[}Levy10{]}.}
+%
+%
+%\end{figure}
+%
+%
+%\end{frame}
 
 \begin{frame}{Weights for Laplacian operator}
 
@@ -1289,17 +1290,15 @@ extraction software.}
 
 \begin{itemize}
 \item This work presented a novel extension of the Laplace Beltrami operator
-for hybrid quad/triangle meshes, and the successful application of
-such principles in different types of problems in computer geometric
-modeling like smoothing, enhancing, sculpting, deformation, reposing
-and skeleton extraction.
+for hybrid quad/triangle meshes
+% and the successful application of such principles in different types of problems in computer geometric modeling like smoothing, enhancing, sculpting, deformation, reposing and skeleton extraction.
 \pause{}
-\item A new sculpting brush to made a proper inflation while preserving
-the geometric details in real-time sessions was proposed, implemented
-and tested.
-\pause{}
-\item We have largely demonstrated that our method has a good performance,
-stability and robustness of the extension proposed.
+\item A new sculpting brush to perform a proper inflation while preserving
+the geometric details in real-time sculpt sessions
+% was proposed, implemented and tested.
+%\pause{}
+%\item We have largely demonstrated that our method has a good performance,
+%stability and robustness of the extension proposed.
 \pause{}
 \item This novel extension of the Laplace Beltrami operator was introduced
 in the computer modeling industry inside the Blender 3D computer graphics
